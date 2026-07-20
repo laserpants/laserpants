@@ -8,9 +8,19 @@
 
 Coal is a statically typed, purely functional programming language with Hindley–Milner type system, algebraic data types, extensible records, traits, and codata. The Coal compiler is implemented in Haskell.
 
-> See the official website for a [language manual](https://coal-lang.org/language-manual/) and getting started instructions:
-> 
-> Website: <b>[coal-lang.org](https://coal-lang.org/)</b>
+> See the official website for a [language manual](https://coal-lang.org/language-manual/) and getting started instructions.
+
+As a total language, Coal takes a different approach to recursion, following the motto that "recursion is the goto of functional programming." To guarantee that programs are provably terminating, recursion is only available in a restricted form, known as *structural recursion*.
+
+```
+fun sum(numbers : List<int32>) : int32 =
+  fold(numbers) {
+    | [] => 0
+    | x :: @tot => x + tot
+  }
+```
+
+The language finds inspiration in ideas from the field of Mathematics of Program Construction, where streams and other infinite data types are described as coalgebras — hence the name *Coal*.
 
 ### Packages
 
