@@ -20,6 +20,26 @@ Coal is a statically typed, purely functional programming language with Hindley�
 | 📦 [coal-json](https://codeberg.org/laserpants/coal-json) | A JSON library for the Coal programming language, providing encoding, decoding, and pretty-printing of JSON values with composable decoder combinators and typeclass-based serialization. |
 | 📦 [coal-monads](https://codeberg.org/laserpants/coal-monads) | A collection of common monad implementations for the Coal programming language. | 
 
+## IR Builder
+
+A Haskell library for constructing LLVM IR programmatically. It provides a monadic DSL for building modules, functions, blocks, and instructions, along with a pure renderer that serializes the result to LLVM assembly
+
+You describe an IR module using the `IRBuilder` monad. When you run
+`compileModule`, the builder produces an `IRModule` value. `renderModule`
+then converts that value to the textual LLVM IR format that can be passed
+to `llc`, `clang`, or `lli`.
+
+```haskell
+import LLVM.IR
+
+example :: Text
+example = compileModule "example" $ do
+  define i32 "add_one" [(i32, "x")] LExternal [] $ do
+    beginBlock "entry"
+    r <- add i32 (OLocal i32 "x") (OConstant (CInt 32 1))
+    ret r
+```
+
 <p style="margin-top: 2em;">
 <a href="https://www.buymeacoffee.com/laserpants"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="64" /></a>
 </p>
