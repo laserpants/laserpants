@@ -12,7 +12,7 @@ Coal is a statically typed, purely functional programming language with Hindleyâ
 > 
 > Website: <b>[coal-lang.org](https://coal-lang.org/)</b>
 
-### Libraries
+### Packages
 
 | Name | Description | 
 |----|---|
@@ -27,17 +27,27 @@ A Haskell library for constructing LLVM IR programmatically. It provides a monad
 You describe an IR module using the `IRBuilder` monad. When you run
 `compileModule`, the builder produces an `IRModule` value. `renderModule`
 then converts that value to the textual LLVM IR format that can be passed
-to `llc`, `clang`, or `lli`.
+to `llc`, `clang`, or `lli`. For example:
 
 ```haskell
 import LLVM.IR
 
-example :: Text
-example = compileModule "example" $ do
+example :: IRBuilder ()
+example = do
   define i32 "add_one" [(i32, "x")] LExternal [] $ do
     beginBlock "entry"
     r <- add i32 (OLocal i32 "x") (OConstant (CInt 32 1))
     ret r
+```
+
+Running `compileModule "example" example` produces:
+
+```llvm
+define i32 @add_one(i32 %x) {
+entry:
+  %1 = add i32 %x, 1
+  ret i32 %1
+}
 ```
 
 <p style="margin-top: 2em;">
