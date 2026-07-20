@@ -2,8 +2,8 @@
 
 ## Coal
 
-<p style="text-align: center;">
-<img src="mine.jpg" height="250">
+<p align="center">
+<img src="mine.jpg" height="150">
 </p>
 
 Coal is a statically typed, purely functional programming language with Hindley–Milner type system, algebraic data types, extensible records, traits, and codata. The Coal compiler is implemented in Haskell.
