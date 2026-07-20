@@ -50,6 +50,8 @@ entry:
 }
 ```
 
+---
+
 <p style="margin-top: 2em;">
 <a href="https://www.buymeacoffee.com/laserpants"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="64" /></a>
 </p>
