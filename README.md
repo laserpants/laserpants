@@ -1,6 +1,6 @@
 # 🪇 My projects
 
-## Coal
+## [Coal](https://github.com/laserpants/coal)
 
 <p align="center">
 <img src="mine.jpg" height="200">
@@ -30,7 +30,7 @@ The language finds inspiration in ideas from the field of Mathematics of Program
 | 📦 [coal-json](https://codeberg.org/laserpants/coal-json) | A JSON library for the Coal programming language, providing encoding, decoding, and pretty-printing of JSON values with composable decoder combinators and typeclass-based serialization. |
 | 📦 [coal-monads](https://codeberg.org/laserpants/coal-monads) | A collection of common monad implementations for the Coal programming language. | 
 
-## IR Builder
+## [IR Builder](https://github.com/laserpants/ir-builder)
 
 A Haskell library for constructing LLVM IR programmatically. It provides a monadic DSL for building modules, functions, blocks, and instructions, along with a pure renderer that serializes the result to LLVM assembly
 
