@@ -28,7 +28,9 @@ The language finds inspiration in ideas from the field of Mathematics of Program
 |----|---|
 | 📦 [coal-containers](https://codeberg.org/laserpants/coal-containers) | A collection of functional data structures for the Coal programming language, providing efficient implementations of common container types. |
 | 📦 [coal-json](https://codeberg.org/laserpants/coal-json) | A JSON library for the Coal programming language, providing encoding, decoding, and pretty-printing of JSON values with composable decoder combinators and typeclass-based serialization. |
-| 📦 [coal-monads](https://codeberg.org/laserpants/coal-monads) | A collection of common monad implementations for the Coal programming language. | 
+| 📦 [coal-monads](https://codeberg.org/laserpants/coal-monads) | A collection of common monad implementations. | 
+| 📦 [coal-micro-test](https://codeberg.org/laserpants/coal-micro-test) | A minimal test framework for the Coal programming language. |
+| 📦 [coal-pretty](https://codeberg.org/laserpants/coal-pretty) | A pretty-printing library providing a Pretty trait with instances for common built-in and composite types. |
 
 ## [IR Builder](https://github.com/laserpants/ir-builder)
 
