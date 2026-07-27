@@ -31,6 +31,7 @@ The language finds inspiration in ideas from the field of Mathematics of Program
 | 📦 [coal-monads](https://codeberg.org/laserpants/coal-monads) | A collection of common monad implementations. | 
 | 📦 [coal-micro-test](https://codeberg.org/laserpants/coal-micro-test) | A minimal test framework for the Coal programming language. |
 | 📦 [coal-pretty](https://codeberg.org/laserpants/coal-pretty) | A pretty-printing library providing a Pretty trait with instances for common built-in and composite types. |
+| 📦 [coal-parsers](https://codeberg.org/laserpants/coal-parsers) | A parser combinator library with modular, composable parsers for text processing, language implementation, and data format parsing. |
 
 ## [IR Builder](https://github.com/laserpants/ir-builder)
 
